@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+:root {
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Mulish", sans-serif;
+  --nav-font: "Raleway", sans-serif;
+}
+@theme {
+  --color-background: #1a1a1a;
+  --color-default: #d9d9d9;
+  --color-heading: #ededed;
+  --color-primary: #ff4d4f;
+  --color-surface: #1c1c1c;
+  --color-contrast: #ffffff;
+  --color-nav: #d9d9d9;
+  --color-nav-hover: #ff4d4f;
+  --color-nav-mobile-background: #2e2e2e;
+  --color-nav-dropdown-background: #2e2e2e;
+  --color-nav-dropdown: #d9d9d9;
+  --color-nav-dropdown-hover: #ff4d4f;
+  --color-bg-light: rgba(30, 30, 31, 0.91);
+  --color-card: rgba(46, 45, 45, 0.5);
+}
+
+:root {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--color-default);
+  background-color: var(--color-background);
+  font-family: var(--default-font);
+}
+.active {
+  color: var(--color-primary);
+}
+
+.cursor {
+  display: inline-block;
+  animation: blink 1s infinite;
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+.online-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: var(--color-background);
+  border-radius: 50%;
+  right: 5px;
+  top: 80%;
+}
+
+.online {
+  width: 15px;
+  height: 15px;
+  background-color: rgb(1, 85, 1);
+  border-radius: 50%;
+  animation: in-out 2s infinite;
+}
+@keyframes in-out {
+  50% {
+    opacity: 0.7;
+  }
+}
+.cta {
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    color-mix(in srgb, var(--color-primary), #667eea 40%)
+  );
+}
+
+#contact .card:hover {
+  box-shadow: 0 5px 20px
+    color-mix(in srgb, var(--color-primary), transparent 90%);
+}
+.portfoli-card:hover .tab-content {
+  display: block;
+}
+#contact .card:hover .icon {
+  color: white;
+}
+
+#contact .card:hover .icon-box {
+  background-color: var(--color-primary);
+}
+
+input:focus {
+  box-shadow: 0 5px 20px
+    color-mix(in srgb, var(--color-primary), transparent 90%);
+}
+#home {
+  /* background-image: url("./assets/img/profile/bg.png"); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#about .profile-img-wrapper {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 24px;
+  position: relative;
+  border-radius: 50%;
+  padding: 6px;
+  background: linear-gradient(
+    135deg,
+    var(--accent-color),
+    color-mix(in srgb, var(--accent-color), #ff6b9d 50%)
+  );
+}
+
+#about .profile-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--surface-color);
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border-top: 4px solid white;
+}
+
+#portfolio .image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  aspect-ratio: 4/3;
+}
