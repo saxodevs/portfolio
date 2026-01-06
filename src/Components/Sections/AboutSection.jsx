@@ -1,4 +1,5 @@
 import { BsBriefcase, BsCalendar, BsDownload, BsEnvelope, BsFacebook, BsGeoAlt, BsInstagram, BsLinkedin, BsMortarboard, BsPhone, BsStarFill, BsStarHalf, BsTwitterX } from "react-icons/bs"
+import cv from '../../assets/cv.pdf'
 import profile from "../../assets/img/profile/profile.png"
 export const AboutSection = () => {
     return (
@@ -45,8 +46,8 @@ export const AboutSection = () => {
                         </div>
                     </div>
                     <div className="bg-gray-50/15  h-[0.2px] w-full my-5"></div>
-                    <button className="flex items-center justify-center mb-5 gap-6 bg-primary px-4 py-3 cursor-pointer rounded-md w-full hover:bg-primary/50  hover:-translate-y-1.25 duration-300"> <BsDownload /> Download CV</button>
-                    <button className="flex items-center justify-center gap-6 bg-primary/30 px-4 py-3 cursor-pointer rounded-md w-full hover:bg-primary/50  hover:-translate-y-1.25 duration-300"> <BsEnvelope /> Contact</button>
+                    <a href={cv} className="flex items-center justify-center mb-5 gap-6 bg-primary px-4 py-3 cursor-pointer rounded-md w-full hover:bg-primary/50  hover:-translate-y-1.25 duration-300"> <BsDownload /> Download CV</a>
+                    <a href="#contact" className="flex items-center justify-center gap-6 bg-primary/30 px-4 py-3 cursor-pointer rounded-md w-full hover:bg-primary/50  hover:-translate-y-1.25 duration-300"> <BsEnvelope /> Contact</a>
                     <div className="bg-gray-50/15  h-[0.2px] w-full my-5"></div>
                     <div className="flex items-center gap-4 py-5">
                         <a href="https://www.facebook.com/saxodevs/"
@@ -163,6 +164,15 @@ export const AboutSection = () => {
                         </div>
                         <div className="w-full h-2.5 bg-card rounded">
                             <div className="w-[68%] h-2.5 bg-primary rounded animate-pulse  duration-200"></div>
+                        </div>
+                    </div>
+                    <div className="my-5">
+                        <div className="flex items-center justify-between mb-2">
+                            <p className="font-bold">JavaScript</p>
+                            <p className="text-primary font-bold">75%</p>
+                        </div>
+                        <div className="w-full h-2.5 bg-card rounded">
+                            <div className="w-[75%] h-2.5 bg-primary rounded animate-pulse  duration-200"></div>
                         </div>
                     </div>
                     <div className="my-5">
